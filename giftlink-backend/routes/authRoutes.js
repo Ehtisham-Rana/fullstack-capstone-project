@@ -2,6 +2,7 @@ const express = require('express');
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const connectToDatabase = require('../models/db');
+const { body, validationResult } = require('express-validator');
 const router = express.Router();
 const dotenv = require('dotenv');
 const pino = require('pino');  // Import Pino logger

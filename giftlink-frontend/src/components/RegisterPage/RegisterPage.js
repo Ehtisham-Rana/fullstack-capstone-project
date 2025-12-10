@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {urlConfig} from '../../config';
 import { useNavigate } from "react-router-dom";
-import { useAppContext } from "../context/AppContext";
+import { useAppContext } from "../../context/AuthContext";
 import "./RegisterPage.css";
 
 function RegisterPage() {
