@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {urlConfig} from '../../config';
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import "./RegisterPage.css";
@@ -17,7 +18,7 @@ function RegisterPage() {
     // Step 2: handleRegister Function
     const handleRegister = async () => {
         try {
-            const response = await fetch("/api/auth/register", {
+            const response = await fetch(`${urlConfig.backendUrl}/api/auth/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
